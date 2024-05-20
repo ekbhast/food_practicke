@@ -1,7 +1,8 @@
 'use strict';
-//1. Функция которая будет скрывть табы
 
 window.addEventListener('DOMContentLoaded', () => {
+
+// Tabs
 
     let tabs = document.querySelectorAll('.tabcontent'),
         tabsParent = document.querySelector('.tabheader__items'),
@@ -38,4 +39,5 @@ window.addEventListener('DOMContentLoaded', () => {
     hideTabs ();
     showTabs();
 
+    // Timer 
 });
