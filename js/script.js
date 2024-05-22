@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 seconds =  Math.floor( (t / 1000) % 60); 
         
         return {
-                'toral' : t,
+                'total' : t,
                 'days' : days,
                 'hours' : hours,
                 'minutes' : minutes,
