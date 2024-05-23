@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 seconds =  Math.floor( (t / 1000) % 60); 
         
         return {
-                'total' : t,
+                'totпшеal' : t,
                 'days' : days,
                 'hours' : hours,
                 'minutes' : minutes,
@@ -93,5 +93,37 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     setTimer('.timer', deadLine);
+
+    // Modal
+
+    const   showModalBtns = document.querySelectorAll('[data-modal]'),
+            closeModalBtn = document.querySelector('[data-close]'),
+            modal = document.querySelector('.modal');
+
+    function showModal (){
+        modal.classList.toggle('show');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal (){
+        modal.classList.toggle('show');
+        document.body.style.overflow = '';
+
+    }
+
+    showModalBtns.forEach((element) => {
+        element.addEventListener('click', showModal);
+    })
+    closeModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    })
+    document.addEventListener('keydown', (e) =>{
+        if (e.code ==='Escape'){
+            closeModal();
+        }
+    })
 
 });
